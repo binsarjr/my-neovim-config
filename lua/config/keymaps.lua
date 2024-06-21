@@ -6,7 +6,8 @@ vim.cmd([[
 
 nnoremap zz :wall<cr>
 nnoremap gs :Neotree reveal<cr>
-nnoremap <S-F> :Telescope<cr>
+nnoremap <S-F> :Telescope live_grep<cr>
+nnoremap tt :Telescope<cr>
 nnoremap <S-E> :e ~/.config/nvim/init.lua<cr>
 ]])
 
