@@ -1,32 +1,20 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-vim.cmd([[
-    call plug#begin()
-
-    Plug 'famiu/bufdelete.nvim'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-    call plug#end()
-]])
-
-vim.cmd([[
-
-nnoremap zz :wall<cr>
-nnoremap gs :Neotree reveal<cr>
-
-]])
-
-vim.keymap.set("n", "<S-C>", ":Bdelete<CR>")
-vim.keymap.set("n", "<\\>", ":Neotree<CR>")
-
-vim.keymap.set("v", "<S->", ":Neotree reveal<CR>")
+-- vim.cmd([[
+--     call plug#begin()
+--
+--     Plug 'famiu/bufdelete.nvim'
+--     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+--
+--     call plug#end()
+-- ]])
 
 vim.g.markdown_fenced_languages = {
   "ts=typescript",
 }
 
--- require("lspconfig").denols.setup({
+-- require("lspconrig").denols.setup({
 --   root_dir = root_pattern("deno.json", "deno.jsonc", ".git"),
 -- })
 
