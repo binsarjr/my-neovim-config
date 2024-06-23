@@ -30,7 +30,7 @@
   "nvim-ansible": { "branch": "main", "commit": "cb5d0cc79c1864b72d5ae40a926a1176b18f1b65" },
   "nvim-cmp": { "branch": "main", "commit": "a110e12d0b58eefcf5b771f533fc2cf3050680ac" },
   "nvim-lint": { "branch": "master", "commit": "941fa1220a61797a51f3af9ec6b7d74c8c7367ce" },
-  "nvim-lspconfig": { "branch": "master", "commit": "f43135c38a37c588053ad5e209c7460f43f6340c" },
+  "nvim-lspconfig": { "branch": "master", "commit": "3c8346db23033fa49ce0eef2e89dbe91cfd54f21" },
   "nvim-notify": { "branch": "master", "commit": "d333b6f167900f6d9d42a59005d82919830626bf" },
   "nvim-snippets": { "branch": "main", "commit": "5c978b3ba0c504dc9f94ca93d17029f26064d229" },
   "nvim-spectre": { "branch": "master", "commit": "ec67d4b5370094b923dfcf6b09b39142f2964861" },
