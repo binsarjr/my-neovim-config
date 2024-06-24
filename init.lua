@@ -51,8 +51,17 @@ local neo_tree = require("neo-tree")
 neo_tree.setup({
   filesystem = {
     filtered_items = {
+      visible = true,
+      show_hidden_count = true,
+      hide_dotfiles = false,
+      hide_gitignored = false,
       hide_by_name = {
         "node_modules",
+        ".git",
+      },
+      never_show = {
+        "node_modules",
+        ".git",
       },
     },
   },
@@ -64,5 +73,15 @@ require("telescope").setup({
       "node_modules",
       "target",
     },
+  },
+})
+
+require("project_nvim").setup({
+  manual_mode = false,
+  detection_methods = { "lsp", "pattern" },
+  silent_chdir = true,
+  show_hidden = true,
+  exclude_dirs = {
+    ".git",
   },
 })
