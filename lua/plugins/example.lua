@@ -72,6 +72,19 @@ return {
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
+
+        intelephense = {
+          filetypes = { "php", "blade" },
+          settings = {
+            intelephense = {
+              filetypes = { "php", "blade" },
+              files = {
+                associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
+                maxSize = 5000000,
+              },
+            },
+          },
+        },
       },
     },
   },
