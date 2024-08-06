@@ -11,13 +11,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
-      opts.servers = opts.servers or {}
-      opts.servers.svelte = opts.servers.svelte or {}
-    end,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    opts = function(_, opts)
       -- set servers for svelte
       opts.servers = opts.servers or {}
 
