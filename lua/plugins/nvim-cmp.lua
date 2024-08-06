@@ -4,7 +4,7 @@ cmp.setup({
   window = {
     completion = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }, -- Add border for the completion menu
-      col_offset = 0, -- Adjust column offset if necessary
+      col_offset = 1, -- Adjust column offset if necessary
       row_offset = 1, -- Adjust row offset if necessary
       winblend = 0, -- Set the window blend to 0 to disable the transparency
     },
