@@ -3,7 +3,9 @@ local cmp = require("cmp")
 return {
   {
     "hrsh7th/nvim-cmp",
-    dependencies = { "SergioRibera/cmp-dotenv" },
+    dependencies = {
+      "SergioRibera/cmp-dotenv",
+    },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       table.insert(opts.sources, {
