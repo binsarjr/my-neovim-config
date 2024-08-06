@@ -11,10 +11,15 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
+      local lspconfig = require("lspconfig")
+
+      -- Set root_dir to detect Svelte projects
+      local root_dir = lspconfig.util.root_pattern("svelte.config.js", "svelte.config.cjs", ".git")
       -- set servers for svelte
       opts.servers = opts.servers or {}
 
       opts.servers.svelte = {
+        root_dir = root_dir,
         keys = {
           {
             "<leader>co",
@@ -30,6 +35,7 @@ return {
       }
 
       opts.servers.vtsls = opts.servers.vtsls or {}
+      opts.servers.vtsls.root_dir = root_dir
 
       LazyVim.extend(opts.servers.vtsls, "settings.vtsls.tsserver.globalPlugins", {
         {
@@ -40,13 +46,14 @@ return {
       })
     end,
   },
-  -- {
-  --   "conform.nvim",
-  --   opts = function(_, opts)
-  --     if LazyVim.has_extra("formatting.prettier") then
-  --       opts.formatters_by_ft = opts.formatters_by_ft or {}
-  --       opts.formatters_by_ft.svelte = { "prettier" }
-  --     end
-  --   end,
-  -- },
+  {
+    "stevearc/conform.nvim",
+    opts = function(_, opts)
+      if LazyVim.has_extra("formatting.prettier") then
+        opts.formatters_by_ft = opts.formatters_by_ft or {}
+        opts.formatters_by_ft.svelte = { "prettier" }
+      end
+    end,
+    ft = { "svelte" },
+  },
 }
