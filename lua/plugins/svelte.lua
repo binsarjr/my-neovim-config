@@ -35,7 +35,6 @@ return {
       }
 
       opts.servers.vtsls = opts.servers.vtsls or {}
-      opts.servers.vtsls.root_dir = root_dir
 
       LazyVim.extend(opts.servers.vtsls, "settings.vtsls.tsserver.globalPlugins", {
         {
