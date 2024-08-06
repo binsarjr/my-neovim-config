@@ -48,11 +48,11 @@ return {
       end
 
       opts.formatters = opts.formatters or {}
-      opts.formatters.prettier = {
-        condition = function(_, ctx)
-          return has_parser(ctx) and (vim.g.lazyvim_prettier_needs_config ~= true or has_config(ctx))
-        end,
-      }
+      -- opts.formatters.prettier = {
+      --   condition = function(_, ctx)
+      --     return has_parser(ctx) and (vim.g.lazyvim_prettier_needs_config ~= true or has_config(ctx))
+      --   end,
+      -- }
     end,
   },
   {
