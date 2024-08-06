@@ -7,3 +7,6 @@ For Now i use neovim as my main editor, and i use lazyvim to manage my plugins.
 - Typescript/Javascript
 - Lua
 
+## Learning
+
+You can find the learning file [here](./learning/README.md)
