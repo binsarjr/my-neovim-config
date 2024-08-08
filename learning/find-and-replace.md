@@ -18,3 +18,7 @@
 - Use `:%s/old/new/g` to replace all occurrences of `old` with `new` in the current buffer
 - Use `:%s/old/new/gc` to replace all occurrences of `old` with `new` in the current buffer with confirmation
 - Use `:%s/old/new/gc` to replace all occurrences of `old` with `new` in the current buffer without confirmation
+
+## Find And Replace
+
+- Use `<leader>sr` to search and replace in the current buffer

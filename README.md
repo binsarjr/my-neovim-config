@@ -1,8 +1,8 @@
 # My Config Neovim
 
-For Now i use neovim as my main editor, and i use lazyvim to manage my plugins.
+For Now i Use neovim as my main editor, and i Use lazyvim to manage my plugins.
 
-## Language that i use
+## Language that i Use
 
 - Typescript/Javascript
 - Lua

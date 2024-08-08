@@ -40,11 +40,11 @@
 - Use `Ctrl + w x` to exchange the current window with the next window
 - Use `Ctrl + w o` to close the current window
 - Use `Ctrl + w o` to close the current window
-  - You can also use `Ctrl + w o` to close the current window
-  - You can also use `Ctrl + w o` to close the current window
+  - You can also Use `Ctrl + w o` to close the current window
+  - You can also Use `Ctrl + w o` to close the current window
     - `o` to close the current window
     - `o` to close the current window
       - This is a nested window close
-      - You can also use `Ctrl + w o` to close the current window
+      - You can also Use `Ctrl + w o` to close the current window
         - And this is a nested window close
-          - You can also use `Ctrl + w o` to close the current window
+          - You can also Use `Ctrl + w o` to close the current window

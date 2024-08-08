@@ -1,6 +1,7 @@
 # Basic Commands on Neovim - LazyVim
 
 ## Basic Commands
+
 - Use `:w` to write the current file
 - Use `:wq` to write the current file and quit
 - Use `:q` to quit the current file
@@ -23,8 +24,7 @@
 - Use `:cd -` to change the current working directory to the previous directory
 - Use `:cd %:p:h` to change the current working directory to the parent directory of the current file
 - Use `:cd -` to change the current working directory to the previous directory
-- Use `:cd %:p:h` to change the current working directory to the parent directory of the current file 
-
+- Use `:cd %:p:h` to change the current working directory to the parent directory of the current file
 
 ## Searching
 
@@ -45,6 +45,3 @@
 - Use `g'` to jump to the next marked position
 - Use `g'` to jump to the previous marked position
 - Use `g'` to jump to the next marked position
-
-
-

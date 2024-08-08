@@ -65,14 +65,14 @@
 - Use `Ctrl + u` to undo the last change
 - Use `Ctrl + r` to redo the last undone change
 - Use `Ctrl + _` to undo the last change
-  - You can also use `Ctrl + _` to redo the last undone change
+  - You can also Use `Ctrl + _` to redo the last undone change
     - This is a nested undo
-    - You can also use `Ctrl + _` to redo the last undone change
+    - You can also Use `Ctrl + _` to redo the last undone change
       - And this is a nested undo
-        - You can also use `Ctrl + _` to redo the last undone change
+        - You can also Use `Ctrl + _` to redo the last undone change
           - And this is a nested undo
-            - You can also use `u` to undo the last change
+            - You can also Use `u` to undo the last change
               - This is a nested undo
-                - You can also use `r` to redo the last undone change
+                - You can also Use `r` to redo the last undone change
                   - And this is a nested undo
-                    - You can also use `u` to undo the last change
+                    - You can also Use `u` to undo the last change
