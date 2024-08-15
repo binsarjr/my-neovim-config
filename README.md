@@ -10,3 +10,7 @@ For Now i Use neovim as my main editor, and i Use lazyvim to manage my plugins.
 ## Learning
 
 You can find the learning file [here](./learning/README.md)
+
+## Keymaps
+
+`<C-leader>` is outward balance keymaps
