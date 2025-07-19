@@ -11,24 +11,6 @@ local supported = {
   "svelte",
 }
 
-local function has_parser(ctx)
-  local ft = vim.api.nvim_buf_get_option(ctx.bufnr, "filetype")
-  local parsers = require("nvim-treesitter.parsers")
-  return parsers.has_parser(ft)
-end
-
-local function has_config(ctx)
-  -- Implementasikan logika untuk menentukan apakah ada konfigurasi Prettier
-  local config_files = { ".prettierrc", ".prettierrc.json", ".prettierrc.js" }
-  local root_dir = vim.fn.expand("%:p:h")
-  for _, config_file in ipairs(config_files) do
-    if vim.loop.fs_stat(root_dir .. "/" .. config_file) then
-      return true
-    end
-  end
-  return false
-end
-
 return {
   {
     "williamboman/mason.nvim",
