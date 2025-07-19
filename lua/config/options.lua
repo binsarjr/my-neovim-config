@@ -18,3 +18,9 @@ vim.g.lazyvim_php_lsp = "phpactor"
 vim.g.lazyvim_python_lsp = "pyright"
 -- Set to "ruff_lsp" to use the old LSP implementation version.
 vim.g.lazyvim_python_ruff = "ruff"
+
+-- Terminal color configuration
+vim.opt.background = "dark"
+vim.opt.termguicolors = true
+vim.cmd('let &t_8f = "\\<Esc>[38;2;%lu;%lu;%lum"')
+vim.cmd('let &t_8b = "\\<Esc>[48;2;%lu;%lu;%lum"')
