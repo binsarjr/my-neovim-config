@@ -11,7 +11,7 @@ This is a Neovim configuration repository using **LazyVim** as the plugin manage
 - **Entry Point**: `init.lua` loads `config.lazy` and `init_cmp`
 - **Plugin Management**: Uses `lazy.nvim` with modular plugin organization
 - **Structure**: Lua-based configuration organized in `lua/` directory
-- **Language Support**: TypeScript/JavaScript, Lua, Python
+- **Language Support**: TypeScript/JavaScript, Lua, Python, Go, Rust, Svelte, PHP, Markdown, YAML, JSON
 
 ## Directory Structure
 
@@ -53,14 +53,26 @@ lua/
 - **TypeScript**: Uses `tsserver` via `typescript.nvim` with organize imports and rename file commands
 - **TailwindCSS**: Configured with Phoenix/Elixir support and color preview in completion
 - **Python**: Uses `pyright` and `ruff` for linting
+- **Go**: Uses `gopls` for language server support
+- **Rust**: Uses `rust_analyzer` for language server support
 - **Styling**: Uses `stylua` for Lua formatting, `prettier` for web languages
 
 ## Key Configuration Details
 
 ### Plugin Sources
 - **LazyVim**: Base configuration and plugin specs
-- **Language Extras**: `lazyvim.plugins.extras.lang.typescript`, `python`
-- **Utilities**: `lazyvim.plugins.extras.util.project`
+- **Language Extras**: 
+  - `lazyvim.plugins.extras.lang.typescript`
+  - `lazyvim.plugins.extras.lang.python`
+  - `lazyvim.plugins.extras.lang.rust`
+  - `lazyvim.plugins.extras.lang.go`
+  - `lazyvim.plugins.extras.lang.svelte`
+  - `lazyvim.plugins.extras.lang.tailwind`
+  - `lazyvim.plugins.extras.lang.markdown`
+  - `lazyvim.plugins.extras.lang.yaml`
+  - `lazyvim.plugins.extras.lang.json`
+- **AI Integration**: `lazyvim.plugins.extras.ai.copilot`
+- **Utilities**: `lazyvim.plugins.extras.util.project`, `lazyvim.plugins.extras.util.dot`
 
 ### Custom Keymaps
 - `<S-e>`: Toggle Neotree file explorer
