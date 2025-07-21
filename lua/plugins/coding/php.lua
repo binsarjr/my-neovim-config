@@ -52,28 +52,30 @@ return {
     opts = function(_, opts)
       opts.ensure_installed = opts.ensure_installed or {}
       table.insert(opts.ensure_installed, "php-cs-fixer")
-      -- Explicitly exclude phpactor from auto-install
+      table.insert(opts.ensure_installed, "phpstan")
+      -- Hapus phpcs dari mason installation
+      -- Explicitly exclude phpactor and phpcs from auto-install
       opts.ensure_installed = vim.tbl_filter(function(pkg)
-        return pkg ~= "phpactor"
+        return pkg ~= "phpactor" and pkg ~= "phpcs"
       end, opts.ensure_installed or {})
     end,
   },
   {
-    "nvimtools/none-ls.nvim",
+    -- Configure nvim-lint for PHP linting
+    "mfussenegger/nvim-lint",
     optional = true,
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      opts.sources = opts.sources or {}
-      table.insert(opts.sources, nls.builtins.formatting.phpcsfixer)
-      table.insert(opts.sources, nls.builtins.diagnostics.phpcs)
-    end,
+    opts = {
+      linters_by_ft = {
+        php = { "phpstan" }, -- Hanya phpstan, hilangkan phpcs
+      },
+    },
   },
   {
     "stevearc/conform.nvim",
     optional = true,
     opts = {
       formatters_by_ft = {
-        php = { { "pint", "php_cs_fixer" } },
+        php = { "pint", "php_cs_fixer" },
       },
     },
   },
@@ -86,6 +88,7 @@ return {
       "tpope/vim-dotenv",
       "MunifTanjim/nui.nvim",
       "nvimtools/none-ls.nvim",
+      "kevinhwang91/promise-async", -- Fix missing dependency
     },
     cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
     keys = {
@@ -94,11 +97,17 @@ return {
       { "<leader>lm", ":Laravel related<cr>" },
     },
     event = { "VeryLazy" },
-    config = true,
-    opts = {
-      lsp_server = "intelephense",
-      features = { null_ls = { enable = false } },
-    },
+    config = function()
+      require("laravel").setup({
+        lsp_server = "intelephense",
+        features = { 
+          null_ls = { enable = false },
+          route_info = { enable = true }, -- Fix healthcheck issue
+          commands = { enable = true },
+        },
+      })
+    end,
+    opts = {},
   },
   {
     -- Add the blade-nav.nvim plugin which provides Goto File capabilities
