@@ -11,7 +11,8 @@ vim.g.lazyvim_prettier_needs_config = true
 
 -- LSP Server to use for PHP.
 -- Set to "intelephense" to use intelephense instead of phpactor.
-vim.g.lazyvim_php_lsp = "phpactor"
+vim.g.lazyvim_php_lsp = "intelephense"
+-- vim.g.lazyvim_php_lsp = "phpactor"
 
 -- LSP Server to use for Python.
 -- Set to "basedpyright" to use basedpyright instead of pyright.
